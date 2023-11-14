@@ -458,8 +458,6 @@ Examples:
 * `elistv 1`
   * Lists the volunteers added to the event at index 1 of the displayed event list.
 
-<div style="page-break-after: always;"></div>
-
 #### Listing all events joined by a volunteer: `vliste`
 
 Shows a list of all events joined by a volunteer.
@@ -534,13 +532,13 @@ Exits the program.
 
 Format: `exit`
 
+<div style="page-break-after: always;"></div>
+
 ### Handling data manually
 
 #### Saving the data
 
 iVolunteer data is automatically saved in the hard disk after any command is executed. There is no need to manually save your data.
-
-<div style="page-break-after: always;"></div>
 
 #### Editing the data file
 
@@ -551,10 +549,6 @@ iVolunteer data is saved automatically as two JSON files, `[JAR file location]/d
 **Caution:**
 If your changes to any data file makes its format invalid, iVolunteer will discard all data and start with an empty data file at the next run.  Hence, it is recommended to take a backup of the file before editing it.
 </box>
-
-#### Archiving data files `[coming in v2.0]`
-
-_Details coming soon ..._
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -574,8 +568,6 @@ _Details coming soon ..._
 **Q**: How do I fill up the *role* information within the UI?<br><br>
 ![Adding role in UI](images/user-guide/add-to-roles.png)<br><br>
 
-<div style="page-break-after: always;"></div>
-
 **A**: To add a **volunteer** with a certain role, you can use the [`eaddv` command](#adding-a-volunteer-into-an-event-eaddv) as follows:
 1. Ensure that the volunteer's skill matches the role of the event you want to fill up (both role and skills are case-sensitive).
    * In the example image above, volunteers with skills `chef` or `cooking` can be added. If not, you can use the [`eedit` command](#edit-the-details-of-an-event-eedit) (e.g. `eedit VOLUNTEER_INDEX s/cooking s/other_skill`) to change the volunteer's skills to match the role.
@@ -591,12 +583,6 @@ _Details coming soon ..._
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Known issues
-
-coming soon
-
---------------------------------------------------------------------------------------------------------------------
-
 <div style="page-break-after: always;"></div>
 
 ## Command summary
@@ -607,7 +593,7 @@ coming soon
 | **Create a new volunteer profile**            | `vcreate n/NAME p/PHONE e/EMAIL [s/SKILL]...`<br> e.g.,`vcreate n/John Lim p/81234567 e/john123@gmail.com s/Cooking`                                                                                                                                                                                                                    |
 | **List all volunteer profiles**               | `vlist`                                                                                                                                                                                                                                                                                                                                 |
 | **Finding volunteers by name and skill**      | `vfind [n/NAME]…​ [s/SKILL]…` <br> e.g., `vfind n/charlotte s/mechanic`                                                                                                                                                                                                                                                                  |
-| **Edit a volunteer profile**                  | `vedit VOLUNTEER_INDEX [n/NAME] [p/PHONE] [e/EMAIL] [s/SKILL]…​` <br> e.g., `vedit 1 p/91234567 e/johndoe@example.com`                                                                                                                                                                                                                   |
+| **Edit a volunteer profile**                  | `vedit VOLUNTEER_INDEX [p/PHONE] [e/EMAIL] [s/SKILL]…​` <br> e.g., `vedit 1 p/91234567 e/johndoe@example.com`                                                                                                                                                                                                                            |
 | **Delete a volunteer profile**                | `vdelete VOLUNTEER_INDEX` <br> e.g., `vdelete 4`                                                                                                                                                                                                                                                                                        |
 | **Create a new event**                        | `ecreate n/NAME r/ROLE_WITH_QUANTITY… sd/START_DATE_AND_TIME [ed/END_DATE_AND_TIME] l/LOCATION dsc/DESCRIPTION [m/MATERIAL_WITH_QUANTITY]... [b/BUDGET] [vs/MAX_VOLUNTEER_COUNT]` <br> e.g., `ecreate n/clean beach r/cleaner sd/30/11/2023 1200 ed/30/11/2023 1800 l/east coast park dsc/clean ECP m/10 gloves m/10 trash bags b/50.00`|
 | **List all events**                           | `elist`                                                                                                                                                                                                                                                                                                                                 |
